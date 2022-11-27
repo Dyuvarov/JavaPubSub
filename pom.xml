@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dyuvarov.ractivepubsub</groupId>
+  <groupId>com.dyuvarov.reactivepubsub</groupId>
   <artifactId>ReactivePubSub</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>ReactivePubSub</name>
@@ -10,6 +10,7 @@
 
   <modules>
     <module>common</module>
+    <module>FlowAPI</module>
   </modules>
 
   <properties>
@@ -29,6 +30,12 @@
       <artifactId>lombok</artifactId>
       <version>1.18.24</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.9.1</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>
