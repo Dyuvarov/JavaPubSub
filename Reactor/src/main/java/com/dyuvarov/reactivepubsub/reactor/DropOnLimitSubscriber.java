@@ -6,12 +6,18 @@ import org.reactivestreams.Subscription;
 import reactor.core.publisher.BaseSubscriber;
 
 import java.util.function.Consumer;
+
+/**
+ * Subscriber which consumes limited number of elements from publisher.
+ * Takes itemsLimit count of items and stops to handle backpressure.
+ */
 @Log4j2
 @AllArgsConstructor
 public class DropOnLimitSubscriber<T> extends BaseSubscriber<T> {
-
+    /** Received item handler */
     private final Consumer<? super T> handler;
 
+    /** How many items will be processed from publisher */
     private long itemsLimit;
 
     @Override
